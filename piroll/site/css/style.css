@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+body {
+  min-width: 1170px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+h1 {
+  color: #1d1d1d;
+  font-size: 38px;
+  line-height: 48px;
+  letter-spacing: 0.38px;
+  margin: unset;
+}
+input,
+textarea {
+  padding: 18px 20px;
+}
+input,
+textarea,
+button {
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+button {
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 23px 46px;
+  cursor: pointer;
+  transition: .2s;
+  background-color: #10c9c3;
+}
+button:hover {
+  background-color: #00d9d2;
+}
+.color-element-hover {
+  transition: .2s;
+  background-color: #10c9c3;
+}
+.color-element-hover:hover {
+  background-color: #00d9d2;
+}
+.description {
+  font-family: "Nunito Sans";
+  color: #787878;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.half {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+}
+.width {
+  width: 1170px;
+}
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 1170px;
+}
+.half .wrapper {
+  width: 585px;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+header .menu {
+  width: 1170px;
+  height: 25px;
+  margin: 38px 0;
+  display: flex;
+  justify-content: space-between;
+}
+header .menu .logo {
+  background-image: url('../img/logo.png');
+  width: 31px;
+}
+header .menu .items {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  display: flex;
+  align-items: center;
+  transition: .3s;
+}
+header .menu .items a {
+  transition: .2s;
+}
+header .menu .items a:not(:last-child) {
+  margin-right: 30px;
+}
+header .menu .items a.select {
+  color: #10c9c3;
+}
+header .menu .items a:hover {
+  color: #00d9d2;
+}
+.banner {
+  width: 100%;
+  height: 670px;
+  background-color: #e9e9e9;
+}
+.banner .half {
+  float: right;
+}
+.banner .text {
+  margin: 235px 25px 0 80px;
+}
+.banner .text .description,
+.banner .text button {
+  margin-left: 5px;
+}
+.banner .text .description {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.about-us,
+.our-work,
+.need-a-project {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 100px;
+  width: 100%;
+}
+.about-us .text,
+.our-work .text,
+.need-a-project .text {
+  width: 620px;
+  text-align: center;
+}
+.about-us .text .description,
+.our-work .text .description,
+.need-a-project .text .description {
+  margin: 40px 0 37px;
+}
+.about-us .text .sign,
+.our-work .text .sign,
+.need-a-project .text .sign {
+  background-image: url('../img/signature.png');
+  height: 57px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.skills {
+  height: 570px;
+}
+.skills .half {
+  background-color: #f8f9f9;
+}
+.skills .half .wrapper {
+  float: right;
+  flex-direction: column;
+  justify-content: center;
+}
+.skills .half.right {
+  background-color: #e9e9e9;
+  float: right;
+}
+.skills h1 {
+  margin-bottom: 40px;
+}
+.skills .skill-bar {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.skills .skill-bar .name {
+  margin-bottom: 20px;
+}
+.skills .skill-bar #js-percent {
+  padding-left: 18px;
+}
+.skills .skill-bar .bar {
+  background-color: #d8d8d8;
+  height: 3px;
+  width: 500px;
+  margin-bottom: 40px;
+}
+.skills .skill-bar .bar .js-subbar {
+  position: relative;
+  top: 0;
+  background-color: #10c9c3;
+  width: 50%;
+  height: 100%;
+}
+.numbers {
+  background-color: #10c9c3;
+  height: 240px;
+  color: #fff;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.numbers .wrapper {
+  align-items: center;
+}
+.numbers .statistics {
+  width: 25%;
+}
+.numbers .statistics .num {
+  font-size: 18px;
+}
+.numbers .statistics .name {
+  font-size: 13px;
+}
+.numbers .statistics .num,
+.numbers .statistics .name {
+  margin-left: 65px;
+}
+.numbers .statistics:before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.numbers .project:before {
+  background-image: url('../img/pe-7s-portfolio.png');
+}
+.numbers .working:before {
+  background-image: url('../img/pe-7s-clock.png');
+}
+.numbers .positive:before {
+  background-image: url('../img/pe-7s-star.png');
+  margin-top: -2px;
+}
+.numbers .happy:before {
+  background-image: url('../img/pe-7s-like.png');
+}
+.work {
+  display: flex;
+  flex-wrap: wrap;
+}
+.work a {
+  display: block;
+  min-width: 25%;
+  height: 20vw;
+  position: relative;
+}
+.work a:nth-child(1),
+.work a:nth-child(3),
+.work a:nth-child(6),
+.work a:nth-child(8) {
+  background-color: black;
+}
+.work a:before {
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  background-color: #cccccc75;
+  background-position: center;
+  transition: .2s;
+}
+.work a:hover:before {
+  background-color: #cccccc00;
+  background-image: url('../img/pe-7s-look.png');
+  background-repeat: no-repeat;
+}
+.show-more {
+  width: 100%;
+  background-color: #f5f5f5;
+  font-size: 12px;
+  line-height: 100px;
+  text-align: center;
+  color: #8e8e8e;
+  letter-spacing: 1.2px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.our-work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.our-work .description {
+  margin: 41px 0 50px 0 !important;
+}
+.our-work .wrapper {
+  background-color: #e9e9e9;
+  justify-content: center;
+  align-items: center;
+  height: 570px;
+}
+.our-work .wrapper .play {
+  background-image: url('../img/play.png');
+  width: 86px;
+  height: 86px;
+}
+.services {
+  display: flex;
+  justify-content: center;
+  padding: 75px 0 75px;
+  background-color: #f5f5f5;
+}
+.services .wrapper {
+  flex-wrap: wrap;
+}
+.services .service {
+  min-width: calc(25% - 50px);
+  width: calc(25% - 50px);
+  text-align: center;
+  margin: 25px;
+}
+.services .service .head {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #191919;
+  font-weight: bold;
+  line-height: 30px;
+}
+.services .service .description {
+  font-size: 16px;
+  font-family: "Nunito Sans";
+  letter-spacing: 0.08px;
+  color: #787878;
+  line-height: 24px;
+}
+.services .service.ui:before,
+.services .service.web:before,
+.services .service.mobile:before,
+.services .service.game:before,
+.services .service.seo:before,
+.services .service.photo:before,
+.services .service.graphic:before,
+.services .service.illustrations:before {
+  content: '';
+  display: block;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.services .service.ui:before {
+  background-image: url('../img/pe-7s-diamond.png');
+}
+.services .service.web:before {
+  background-image: url('../img/pe-7s-arc.png');
+}
+.services .service.mobile:before {
+  background-image: url('../img/pe-7s-phone.png');
+}
+.services .service.game:before {
+  background-image: url('../img/pe-7s-joy.png');
+}
+.services .service.seo:before {
+  background-image: url('../img/pe-7s-plane.png');
+}
+.services .service.photo:before {
+  background-image: url('../img/pe-7s-star1.png');
+}
+.services .service.graphic:before {
+  background-image: url('../img/pe-7s-magic-wand.png');
+}
+.services .service.illustrations:before {
+  background-image: url('../img/pe-7s-paint-bucket.png');
+}
+.comments {
+  background-color: #10c9c3;
+  height: 500px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.comments .wrapper {
+  justify-content: center;
+  width: 800px;
+  text-align: center;
+  position: relative;
+}
+.comments .wrapper .comment {
+  margin-top: 179px;
+}
+.comments .wrapper .comment .text {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+}
+.comments .wrapper .comment .text:before,
+.comments .wrapper .comment .text:after {
+  font-size: 30px;
+  letter-spacing: 0.3px;
+}
+.comments .wrapper .comment .text:before {
+  content: '“ ';
+}
+.comments .wrapper .comment .text:after {
+  content: '”';
+}
+.comments .wrapper .comment .author {
+  text-transform: uppercase;
+  line-height: 36px;
+  letter-spacing: 1.2px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.comments .wrapper .switcher {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 60px;
+}
+.comments .wrapper .switcher .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  opacity: .8;
+  background-color: #fff;
+  margin: 0 6px 0;
+  cursor: pointer;
+}
+.comments .wrapper .switcher .dot.select {
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px 0;
+}
+.comments .wrapper .switcher .dot:hover {
+  opacity: 1;
+}
+.clients {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+.clients .wrapper {
+  justify-content: space-between;
+}
+.clients .wrapper .client {
+  width: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.clients .wrapper .handmade {
+  background-image: url('../img/1.png');
+}
+.clients .wrapper .mountain {
+  background-image: url('../img/2.png');
+}
+.clients .wrapper .athletic {
+  background-image: url('../img/3.png');
+}
+.clients .wrapper .mountainbike {
+  background-image: url('../img/4.png');
+}
+.need-a-project {
+  background-color: #f5f5f5;
+  flex-direction: column;
+  align-items: center;
+}
+.need-a-project .wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+.need-a-project .wrapper .name-email {
+  display: flex;
+  justify-content: space-between;
+  width: 670px;
+}
+.need-a-project .wrapper .name-email input {
+  width: 280px;
+  height: 12px;
+}
+.need-a-project .wrapper input {
+  height: 12px;
+}
+.need-a-project .wrapper textarea {
+  height: 170px;
+  resize: none;
+}
+.need-a-project .wrapper input,
+.need-a-project .wrapper textarea {
+  width: 630px;
+}
+.need-a-project .wrapper input,
+.need-a-project .wrapper textarea {
+  margin-bottom: 30px;
+}
+footer {
+  background-color: #141414;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  color: #636363;
+  line-height: 24px;
+}
+footer .wrapper {
+  justify-content: space-between;
+}
+footer a {
+  color: #636363;
+}
+footer .inc .title {
+  font-weight: bold;
+  margin-bottom: 27px;
+  color: #fff;
+}

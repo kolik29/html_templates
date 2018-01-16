@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+@main-color: #10c9c3;
+@main-color-hover: saturate(@main-color, 100%);
+
+body {
+	min-width: 1170px;
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+h1 {
+	color: #1d1d1d;
+	font-size: 38px;
+	line-height: 48px;
+	letter-spacing: 0.38px;
+	margin: unset;
+}
+
+input,
+textarea {
+	padding: 18px 20px;
+}
+
+input,
+textarea,
+button {
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+
+button {
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	padding: 23px 46px;
+	cursor: pointer;
+	.color-element-hover;
+}
+
+.color-element-hover {
+	transition: .2s;
+	background-color: @main-color;
+
+	&:hover {
+		background-color: @main-color-hover;
+	}
+}
+
+.description {
+	font-family: "Nunito Sans";
+	color: #787878;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.half {
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+}
+
+.width {
+	width: 1170px;
+}
+
+.wrapper {
+	display: flex;
+	height: 100%;
+	.width;
+}
+
+.half {
+	.wrapper {
+		width: 585px;
+	}
+}
+
+header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+
+	.menu {
+		.width;
+		height: 25px;
+		margin: 38px 0;
+		display: flex;
+		justify-content: space-between;
+
+		.logo {
+			background-image: url('../img/logo.png');
+			width: 31px;
+		}
+
+		.items {
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 1.2px;
+			display: flex;
+			align-items: center;
+			transition: .3s;
+
+			a {
+				transition: .2s;
+			}
+
+			a:not(:last-child) {
+				margin-right: 30px;
+			}
+
+			a.select {
+				color: @main-color;
+			}
+			a:hover {
+				color: @main-color-hover;
+			}
+		}
+	}
+}
+
+.banner {
+	width: 100%;
+	height: 670px;
+	background-color: #e9e9e9;
+
+	.half {
+		float: right;
+	}
+
+	.text {
+		margin: 235px 25px 0 80px;
+
+		.description,
+		button {
+			margin-left: 5px;
+		}
+
+		.description {
+			margin-top: 32px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.about-us,
+.our-work,
+.need-a-project {
+	display: flex;
+	justify-content: center;
+	padding: 100px 0 100px;
+	width: 100%;
+
+	.text {
+		width: 620px;
+		text-align: center;
+
+		.description {
+			margin: 40px 0 37px;
+		}
+
+		.sign {
+			background-image: url('../img/signature.png');
+			height: 57px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}
+
+.skills {
+	height: 570px;
+
+	.half {
+		background-color: #f8f9f9;
+		.wrapper {
+			float: right;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		&.right {
+			background-color: #e9e9e9;
+			float: right;
+		}
+	}
+
+	h1 {
+		margin-bottom: 40px;
+	}
+
+	.skill-bar {
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1.2px;
+
+		.name {
+			margin-bottom: 20px;
+		}
+
+		#js-percent {
+			padding-left: 18px;
+		}
+
+		.bar {
+			background-color: #d8d8d8;
+			height: 3px;
+			width: 500px;
+			margin-bottom: 40px;
+
+			.js-subbar {
+				position: relative;
+				top: 0;
+				background-color: @main-color;
+				width: 50%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+.numbers {
+	background-color: @main-color;
+	height: 240px;
+	color: #fff;
+	letter-spacing: 0.54px;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+
+	.wrapper {
+		align-items: center;
+	}
+
+	.statistics {
+		width: 25%;
+
+		.num {
+			font-size: 18px;
+		}
+
+		.name {
+			font-size: 13px;
+		}
+
+		.num,
+		.name {
+			margin-left: 65px;
+		}
+
+		&:before {
+			content: '';
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.project:before {
+		background-image: url('../img/pe-7s-portfolio.png');
+	}
+
+	.working:before {
+		background-image: url('../img/pe-7s-clock.png');
+	}
+
+	.positive:before {
+		background-image: url('../img/pe-7s-star.png');
+		margin-top: -2px; //**********ХАК!!!!!!!!!!!!
+	}
+
+	.happy:before {
+		background-image: url('../img/pe-7s-like.png');
+	}
+}
+
+.work {
+	display: flex;
+	flex-wrap: wrap;
+
+	a {
+		display: block;
+		min-width: 25%;
+		height: 20vw;
+		position: relative;
+	}
+
+	a:nth-child(1),
+	a:nth-child(3),
+	a:nth-child(6),
+	a:nth-child(8) {
+		background-color: black;
+	}
+
+	a:before {
+		width: 100%;
+		height: 100%;
+		content: '';
+		position: absolute;
+		background-color: #cccccc75;
+		background-position: center;
+		transition: .2s;
+	}
+
+	a:hover:before {
+		background-color: #cccccc00;
+		background-image: url('../img/pe-7s-look.png');
+		background-repeat: no-repeat;
+	}
+}
+
+.show-more {
+	width: 100%;
+	background-color: #f5f5f5;
+	font-size: 12px;
+	line-height: 100px;
+	text-align: center;
+	color: #8e8e8e;
+	letter-spacing: 1.2px;
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.our-work {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.description {
+		margin: 41px 0 50px 0 !important;
+	}
+
+	.wrapper {
+		background-color: #e9e9e9;
+		justify-content: center;
+		align-items: center;
+		height: 570px;
+
+		.play {
+			background-image: url('../img/play.png');
+			width: 86px;
+			height: 86px;
+		}
+	}
+}
+
+.services {
+	display: flex;
+	justify-content: center;
+	padding: 75px 0 75px;
+	background-color: #f5f5f5;
+
+	.wrapper {
+		flex-wrap: wrap;
+	}
+
+	.service {
+		min-width: ~'calc(25% - 50px)';
+		width: ~'calc(25% - 50px)';
+		text-align: center;
+		margin: 25px;
+
+		.head {
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: 1.2px;
+			color: #191919;
+			font-weight: bold;
+			line-height: 30px;
+		}
+
+		.description {
+			font-size: 16px;
+			font-family: "Nunito Sans";
+			letter-spacing: 0.08px;
+			color: #787878;
+			line-height: 24px;
+		}
+
+		&.ui:before,
+		&.web:before,
+		&.mobile:before,
+		&.game:before,
+		&.seo:before,
+		&.photo:before,
+		&.graphic:before,
+		&.illustrations:before {
+			content: '';
+			display: block;
+			height: 45px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&.ui:before {
+			background-image: url('../img/pe-7s-diamond.png');
+		}
+
+		&.web:before {
+			background-image: url('../img/pe-7s-arc.png');
+		}
+
+		&.mobile:before {
+			background-image: url('../img/pe-7s-phone.png');
+		}
+
+		&.game:before {
+			background-image: url('../img/pe-7s-joy.png');
+		}
+
+		&.seo:before {
+			background-image: url('../img/pe-7s-plane.png');
+		}
+
+		&.photo:before {
+			background-image: url('../img/pe-7s-star1.png');
+		}
+
+		&.graphic:before {
+			background-image: url('../img/pe-7s-magic-wand.png');
+		}
+
+		&.illustrations:before {
+			background-image: url('../img/pe-7s-paint-bucket.png');
+		}
+	}
+}
+
+.comments {
+	background-color: @main-color;
+	height: 500px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+
+	.wrapper {
+		justify-content: center;
+		width: 800px;
+		text-align: center;
+		position: relative;
+
+		.comment {
+			margin-top: 179px;
+
+			.text {
+				font-size: 24px;
+				line-height: 36px;
+				font-weight: bold;
+
+				&:before,
+				&:after {
+					font-size: 30px;
+					letter-spacing: 0.3px;
+				}
+
+				&:before {
+					content: '“ ';
+				}
+
+				&:after {
+					content: '”';
+				}
+			}
+
+			.author {
+				text-transform: uppercase;
+				line-height: 36px;
+				letter-spacing: 1.2px;
+				font-size: 12px;
+				font-weight: bold;
+			}
+		}
+
+		.switcher {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			bottom: 60px;
+
+			.dot {
+				width: 6px;
+				height: 6px;
+				border-radius: 100%;
+				opacity: .8;
+				background-color: #fff;
+				margin: 0 6px 0;
+				cursor: pointer;
+
+				&.select {
+					opacity: 1;
+					width: 10px;
+					height: 10px;
+					margin: 0 3px 0;
+				}
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.clients {
+	height: 200px;
+	display: flex;
+	justify-content: center;
+
+	.wrapper {
+		justify-content: space-between;
+
+		.client {
+			width: 20%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.handmade {
+			background-image: url('../img/1.png');
+		}
+
+		.mountain {
+			background-image: url('../img/2.png');
+		}
+
+		.athletic {
+			background-image: url('../img/3.png');
+		}
+
+		.mountainbike {
+			background-image: url('../img/4.png');
+		}
+	}
+}
+
+.need-a-project {
+	background-color: #f5f5f5;
+	flex-direction: column;
+	align-items: center;
+
+	.wrapper {
+		flex-direction: column;
+		align-items: center;
+
+		.name-email {
+			display: flex;
+			justify-content: space-between;
+			width: 670px;
+
+			input {
+				width: 280px;
+				height: 12px;
+			}
+		}
+
+		input {
+			height: 12px;
+		}
+
+		textarea {
+			height: 170px;
+			resize: none;
+		}
+
+		input,
+		textarea {
+			width: 630px;
+		}
+
+		input,
+		textarea {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+footer {
+	background-color: #141414;
+	padding: 100px 0;
+	display: flex;
+	justify-content: center;
+	color: #636363;
+	line-height: 24px;
+
+	.wrapper {
+		justify-content: space-between;
+	}
+
+	a {
+		color: #636363;
+	}
+
+	.inc .title {
+		font-weight: bold;
+		margin-bottom: 27px;
+		color: #fff;
+	}
+}
