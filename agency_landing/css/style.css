@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+img {
+  border: none;
+}
+button {
+  letter-spacing: 0.32px;
+  font-weight: 700;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+  background-color: #fff;
+  color: #ff2d2d;
+  border: unset;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: rgba(255, 45, 45, 0.05);
+}
+button.bg-color {
+  background-color: #ff2d2d;
+  color: #fff;
+}
+button.bg-color:hover {
+  background-color: #f90000;
+}
+button.size-main {
+  width: 227px;
+  height: 55px;
+}
+button.size-subscribe {
+  padding: 33px 57px;
+}
+button.size-send-message {
+  padding: 29px;
+  text-align: center;
+}
+button.border {
+  border: 2px solid #ff2d2d;
+}
+button.border:hover {
+  border-color: #f90000;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+  color: #000;
+  line-height: 72px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin: unset;
+}
+h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #333;
+  line-height: 55px;
+  text-transform: uppercase;
+  letter-spacing: 0.42px;
+  margin: unset;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #4d4d4d;
+  letter-spacing: 0.27px;
+  margin: unset;
+}
+hr {
+  border: unset;
+}
+hr.type-1 {
+  background-color: #ececec;
+  height: 2px;
+}
+hr.type-2 {
+  height: 3px;
+  width: 132px;
+  background-color: #ff2d2d;
+}
+.description-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.wrapper {
+  width: 1249px;
+  display: flex;
+  margin: auto;
+}
+.left-side,
+.right-side {
+  width: 50%;
+}
+.menu {
+  background-color: #313030;
+  height: 89px;
+  position: sticky;
+  top: 0;
+  margin-top: 29px;
+  margin-bottom: 0;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #e0e0e0;
+  font-weight: 700;
+  z-index: 1;
+}
+.menu .item {
+  padding: 44px 23px 33px;
+  margin: 0 2px;
+}
+.menu .item:hover,
+.menu .item.select {
+  background-color: #ff3f40;
+}
+header {
+  width: 100%;
+  background-color: #f6f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 688px;
+  margin-top: -118px;
+}
+header .home {
+  margin-top: 0;
+}
+header .home .left-side h1 {
+  margin: 226px 0 36px;
+}
+header .home .left-side .description-text {
+  padding: 0 50px 58px 0;
+}
+header .home .right-side .video {
+  margin-top: 226px;
+  height: 356px;
+  width: 551px;
+  background-color: #c4c0b1;
+  float: right;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+}
+.screen-2 {
+  padding: 108px 0 80px;
+}
+.screen-2 .left-side .description-text {
+  margin: 50px 0 58px;
+  padding-right: 100px;
+}
+.screen-2 .left-side button {
+  margin-bottom: 122px;
+}
+.screen-2 .right-side {
+  display: flex;
+  flex-wrap: wrap;
+}
+.screen-2 .right-side .service-item {
+  height: 50%;
+  width: calc(50% - 25px);
+}
+.screen-2 .right-side .service-item:nth-child(odd) {
+  margin-right: 50px;
+}
+.screen-3 {
+  flex-direction: column;
+  align-items: center;
+}
+.screen-3 h2 {
+  margin: 106px 0 34px;
+}
+.screen-3 .description-text {
+  width: 504px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.screen-3 hr {
+  margin-bottom: 88px;
+}
+.screen-3 .products {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.22px;
+  color: #4d4d4d;
+  text-align: center;
+}
+.screen-3 .products .control-item {
+  margin: 0 29px;
+  display: inline-block;
+  cursor: pointer;
+  transition: .2s;
+  margin-bottom: 66px;
+}
+.screen-3 .products input {
+  display: none;
+}
+.screen-3 .products #all:checked ~ .control-item[for="all"],
+.screen-3 .products #print:checked ~ .control-item[for="print"],
+.screen-3 .products #web:checked ~ .control-item[for="web"],
+.screen-3 .products #user:checked ~ .control-item[for="user"],
+.screen-3 .products #mock:checked ~ .control-item[for="mock"] {
+  color: #ff2d2d;
+}
+.screen-3 .products #all:checked ~ .product-all,
+.screen-3 .products #print:checked ~ .product-print,
+.screen-3 .products #web:checked ~ .product-web,
+.screen-3 .products #user:checked ~ .product-user,
+.screen-3 .products #mock:checked ~ .product-mock {
+  display: flex;
+}
+.screen-3 .products .products-item {
+  height: 600px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: none;
+}
+.screen-3 .products .products-item .product-block {
+  width: calc(25% - 10px);
+  height: calc(50% - 10px);
+  margin: 5px;
+}
+.screen-3 .products .products-item.product-all .product-block {
+  background-color: #f5f0dd;
+}
+.screen-3 .products .products-item.product-print .product-block {
+  background-color: red;
+}
+.screen-3 .products .products-item.product-web .product-block {
+  background-color: green;
+}
+.screen-3 .products .products-item.product-user .product-block {
+  background-color: blue;
+}
+.screen-3 .products .products-item.product-mock .product-block {
+  background-color: yellow;
+}
+.screen-4 {
+  flex-direction: column;
+}
+.screen-4 hr {
+  margin-left: 0;
+  margin-bottom: 69px;
+}
+.screen-4 .description-text {
+  padding-right: 150px;
+  margin: 40px 0 33px;
+}
+.screen-4 h2 {
+  margin-top: 138px;
+}
+.screen-4 .team {
+  display: flex;
+}
+.screen-4 .team .avatar {
+  background-color: #f5f0dd;
+  width: 321px;
+  height: 458px;
+  margin-right: 75px;
+}
+.screen-4 .team .description-more-team .name {
+  font-size: 30px;
+  color: #333333;
+  letter-spacing: 0.28px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.screen-4 .team .description-more-team .description-text {
+  color: #4d4d4d;
+  margin: 35px 0 44px;
+}
+.screen-4 .team .links {
+  margin-bottom: 45px;
+}
+.screen-4 .team .links a {
+  margin-right: 35px;
+  font-style: italic;
+  color: #333333;
+  font-size: 18px;
+  letter-spacing: 0.9px;
+}
+.screen-4 .team .more-team {
+  display: flex;
+  align-items: justify-content;
+}
+.screen-4 .team .more-team .min-avatar {
+  background-color: #f5f0dd;
+  height: 214px;
+  flex-grow: 1;
+  margin-right: 35px;
+  cursor: pointer;
+  position: relative;
+  overflow-y: hidden;
+}
+.screen-4 .team .more-team .min-avatar:before {
+  background-color: #00000080;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: 'sokina jue';
+  text-transform: uppercase;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  margin-bottom: -100px;
+  transition: .2s;
+}
+.screen-4 .team .more-team .min-avatar:hover:before {
+  margin-bottom: 0;
+}
+.screen-4 .team .more-team .min-avatar:last-child {
+  margin-right: 0;
+}
+.screen-4 .team .more-team input {
+  display: none;
+}
+.screen-5 {
+  margin-top: 110px;
+  height: 512px;
+  background-color: #313030;
+  color: #fff;
+  text-align: center;
+}
+.screen-5 h2 {
+  color: #fff;
+  padding-top: 140px;
+  margin-bottom: 31px;
+}
+.screen-5 .description-text {
+  margin-bottom: 62px;
+}
+.screen-5 button {
+  width: 214px;
+  height: 79px;
+  text-transform: uppercase;
+}
+.screen-5 input {
+  width: 449px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+  font-size: 16px;
+  padding: 30px 36px;
+}
+.screen-6 {
+  overflow-x: hidden;
+}
+.screen-6 .query-block {
+  width: 731px;
+}
+.screen-6 .query-block h2 {
+  padding: 106px 0 51px;
+}
+.screen-6 .query-block hr {
+  margin: 54px 0 75px;
+}
+.screen-6 form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.screen-6 form .name-email {
+  display: flex;
+}
+.screen-6 form .name-email input {
+  flex-grow: 1;
+  height: 69px;
+  padding: 0 48px;
+}
+.screen-6 form .name-email input:first-child {
+  margin-right: 54px;
+}
+.screen-6 form textarea {
+  height: 249px;
+  margin: 46px 0;
+  resize: none;
+}
+.screen-6 form textarea,
+.screen-6 form input {
+  border-radius: 5px;
+  background-color: #e5e5e5;
+  border: none;
+  outline: none;
+  padding: 35px 48px;
+  font-size: 16px;
+}
+.screen-6 form button {
+  height: 72px;
+}
+.screen-6 form .contact-info {
+  height: 100%;
+  width: 100vw;
+  background-color: #313030;
+  top: 0;
+  left: calc(100% + 107px);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #b3b3b3;
+  padding-left: 79px;
+}
+.screen-6 form .contact-info h3 {
+  text-transform: uppercase;
+  color: #fff;
+}
+.screen-6 form .contact-info a {
+  margin: 30px 0;
+}
+footer {
+  padding: 57px 0 37px;
+  background-color: #313030;
+  margin-top: 110px;
+  color: #949494;
+}
+footer .wrapper {
+  justify-content: space-between;
+}
+footer .soc-icons a {
+  margin-left: 18px;
+}
