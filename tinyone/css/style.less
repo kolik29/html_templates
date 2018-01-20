@@ -1,0 +1,140 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "PT Sans";
+	overflow-x: hidden;
+}
+
+h1 {
+	font-size: 32px;
+	line-height: 32px;
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 20px;
+	line-height: 24px;
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+	color: #010101;
+}
+
+header,
+article,
+footer {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.wrapper {
+		width: 920px;
+	}
+}
+
+.text {
+
+}
+
+.slider {
+	width: 100%;
+	height: 100px;
+	overflow-x: hidden;
+	position: relative;
+
+	.slides {
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		flex-wrap: nowrap;
+	}
+	.slide {
+		height: 100%;
+		min-width: 100%;
+
+		&#slide1 {
+			background-color: red;
+		}
+
+		&#slide2 {
+			background-color: green;
+		}
+
+		&#slide3 {
+			background-color: blue;
+		}
+	}
+
+	.slide-bullets {
+		position: absolute;
+		width: 100%;
+		height: 10px;
+		bottom: 0;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		.bullet {
+			input {
+				display: none;
+			}
+
+			label {
+				display: block;
+				width: 10px;
+				height: 100%;
+				border-radius: 100%;
+				background-color: #ffffff80;
+				transition: .3s;
+			}
+
+			input:checked + label {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+header {
+	background-color: #fcdb00;
+
+	.menu {
+		display: flex;
+		justify-content: space-between;
+		font-weight: bold;
+		margin: 60px 0;
+
+		.logo {
+			display: flex;
+			align-items: center;
+
+			span {
+				font-size: 30px;
+				font-weight: bold;
+				color: #010101;
+				margin-left: 10px;
+			}
+		}
+
+		.items {
+			font-size: 22px;
+			display: flex;
+			align-items: center;
+
+			a:nth-child(2) {
+				margin: 0 70px;
+			}
+		}
+	}
+}
